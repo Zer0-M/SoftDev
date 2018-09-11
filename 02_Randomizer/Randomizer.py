@@ -1,3 +1,7 @@
+# Mohammed Jamil
+# SoftDev1 pd6
+# K02 -- NO-body expects the Spanish Inquisition!
+# 2018-09-07
 import random
 KREWES = {
 
@@ -8,12 +12,16 @@ KREWES = {
         'x': ['Derek', 'Britni', 'Joan', 'Vincent', 'Jared', 'Ivan', 'Thomas', 'Maggie', 'Damian', 'Tina', 'Fabiha', 'John', 'Susan ', 'Kaitlin', 'Michelle', 'Clara', 'Rachel', 'Amit', 'Jerry', 'Raymond', 'Zane', 'Soojin', 'Maryann', 'Adil', 'Josh', 'Imad']
 
 }
-l = list(KREWES.keys())
-#print(l)
-#print(random.choice(l))
-group=KREWES[random.choice(l)]
-#print(group)
-#i = 0
-#while i < 10:
-print(random.choice(group))
-#    i+=1
+def namePicker():
+    l = list(KREWES.keys())
+    #print(l)
+    #print(random.choice(l))
+    group=KREWES[random.choice(l)]
+    #print(group)
+    return random.choice(group)
+
+# Tests
+i = 0
+while i < 10:
+    print(namePicker())
+    i+=1
