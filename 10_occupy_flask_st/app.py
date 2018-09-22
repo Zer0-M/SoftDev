@@ -1,7 +1,7 @@
 from flask import Flask,render_template
 app = Flask(__name__) #create instance of class Flask
 import randoccgen
-occdict=randoccgen.generateDict('G:\\SoftDev\\10_occupy_flask_st\\data\\occupations.csv')
+occdict=randoccgen.generateDict('\\data\\occupations.csv')
 keys=list(occdict.keys())
 values=[]
 for key in keys:
