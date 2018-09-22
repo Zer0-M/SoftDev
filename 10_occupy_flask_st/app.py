@@ -1,7 +1,7 @@
 from flask import Flask,render_template
 app = Flask(__name__) #create instance of class Flask
 import randoccgen
-occdict=randoccgen.generateDict('\\data\\occupations.csv')
+occdict=randoccgen.generateDict('G:\\SoftDev\\10_occupy_flask_st\\data\\occupations.csv')
 keys=list(occdict.keys())
 values=[]
 for key in keys:
@@ -13,7 +13,7 @@ def hello_world():
 
 @app.route("/occupations")
 def occupationtable():
-    return render_template("tabletemplate.html",head0='Job Class',head1='Percentage',collection=keys)
+    return render_template("tabletemplate.html",head0='Job Class',head1='Percentage',collection=occdict)
 
 app.debug = True
 app.run()

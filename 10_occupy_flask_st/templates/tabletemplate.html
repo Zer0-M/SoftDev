@@ -12,12 +12,13 @@
             <th>{{head1}}</th>
         </tr>
         <tbody>
-            {% for item in collection %}
+            {% for key,value in collection.items() %}
             <tr>
                 <td>
-                    {{item}}
+                    {{key}}
                 </td>
                 <td>
+                    {{value}}
 
                 </td>
             </tr>
