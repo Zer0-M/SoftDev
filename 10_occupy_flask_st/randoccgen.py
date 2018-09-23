@@ -11,30 +11,32 @@ def generateDict(filename):
         reader = csv.reader(file)
 
         next(reader) #Skips heading
-        
+
         for line in reader:
+            v = [] #List to be filled with percentage and website
             line[1] = float(line[1]) #Converts percentage to float
-            l.append(line) #Adds each pair into list
-            
+            v.append(line[1])
+            v.append(line[2])
+            r = [line[0], v]
+            l.append(r) #Appends percentage and url list
         d = dict(l) #convert list into dictionary
 
         d.pop("Total")
-        
+
         return d
 
 def getOccupation():
-    d=generateDict('\\data\\occupations.csv')
+    d=generateDict('G:\\SoftDev\\10_occupy_flask_st\\data\occupations.csv')
     rng = random.uniform(0,99.8)#random number
-    x = 0 #Saves the percentage of the previous occupation 
+    x = 0 #Saves the percentage of the previous occupation
     for key in d:
-        d[key] = d[key] + x #Add previous percentage to current one
-        if d[key] > rng:
+        d[key][0] = d[key][0] + x #Add previous percentage to current one
+        if d[key][0] > rng:
             return key
-        x = d[key] #Updates x
-    
-        
+        x = d[key][0] #Updates x
+
+
 #=========================================
-print(getOccupation())
 # Tests to check if percentages were correct
 #l=list(generateDict().keys())
 #count=[0]*len(l)

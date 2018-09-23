@@ -2,24 +2,30 @@
 <html>
 
 <head>
-    <title>temp</title>
+    <title>{{title}}</title>
 </head>
 
 <body>
+    <h1>{{Heading}}</h1>
+    <h3> <b> Random Occupation Generator: </b> <a href={{url}}> {{occ}} </a></h3>
+    <br>
     <table>
         <tr>
             <th>{{head0}}</th>
             <th>{{head1}}</th>
+            <th>{{head2}}</th>
         </tr>
         <tbody>
-            {% for key,value in collection.items() %}
+            {% for key,value in collection.items() %}{#for loops can access both keys and values of a dictionary using this syntax#}
             <tr>
                 <td>
                     {{key}}
                 </td>
                 <td>
-                    {{value}}
-
+                    {{value[0]}}{#if a key has two or more values each can be accessed seperately using the notation shown#}
+                </td>
+                <td>
+                    <a href={{value[1]}}> click here </a>
                 </td>
             </tr>
             {% endfor %}
