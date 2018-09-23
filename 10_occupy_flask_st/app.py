@@ -1,3 +1,9 @@
+#EmptyFlask- Mohammed Jamil, Isaac Jon
+#SoftDev1 pd06
+#K#10 -- Jinja Tuning
+#2018-09-24   
+
+
 from flask import Flask,render_template
 app = Flask(__name__) #create instance of class Flask
 import randoccgen #use the python file from assignment 3 as a module in order to use its functions(name changed for easier use)
