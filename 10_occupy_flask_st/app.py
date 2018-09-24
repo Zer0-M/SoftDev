@@ -20,7 +20,7 @@ def hello_world():
 
 @app.route("/occupations")
 def occupationtable():
-    return render_template("tabletemplate.html",title="Job Picker",Heading="Randomly Selected Job For The Needy",head0='Job Class',head1='Percentage',head2='URL',collection=occdict,foo=randOcc,url=randOccURL)
+    return render_template("tabletemplate.html",title="Job Picker",Heading="Randomly Selected Job For The Needy",head0='Job Class',head1='Percentage',head2='URL',collection=occdict,occ=randOcc,url=randOccURL)
 
 app.debug = True
 app.run()
