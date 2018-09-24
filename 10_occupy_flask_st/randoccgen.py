@@ -26,7 +26,7 @@ def generateDict(filename):
         return d
 
 def getOccupation():
-    d=generateDict('G:\\SoftDev\\10_occupy_flask_st\\data\occupations.csv')
+    d=generateDict('data/occupations.csv')
     rng = random.uniform(0,99.8)#random number
     x = 0 #Saves the percentage of the previous occupation
     for key in d:
