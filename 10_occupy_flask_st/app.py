@@ -5,11 +5,9 @@
 
 
 from flask import Flask,render_template
+from util import randoccgen #use the python file from assignment 3 as a module in order to use its functions(name changed for easier use)
 app = Flask(__name__) #create instance of class Flask
-import randoccgen #use the python file from assignment 3 as a module in order to use its functions(name changed for easier use)
-occDict=randoccgen.generateDict('data/occupations.csv')#create a dictionary from the occupations csv
-randOcc=randoccgen.getOccupation()#randomly generate an occupation weighted by percentage
-randOccURL = occDict[randOcc][1]#get the url for associated with randomly selected occupation in the csv
+occDict=randoccgen.generateDict('data/occupations.csv') #create a dictionary from the occupations csv
 
 @app.route("/")
 def landingPage():
@@ -20,6 +18,8 @@ def landingPage():
 
 @app.route("/occupations")
 def occTable():
+    randOcc=randoccgen.getOccupation() #randomly generate an occupation weighted by percentage
+    randOccURL = occDict[randOcc][1] #get the url for associated with randomly selected occupation in the csv
     return render_template("tabletemplate.html",title="Job Picker",Heading="Randomly Selected Job For The Needy",head0='Job Class',head1='Percentage',head2='URL',collection=occDict,occ=randOcc,url=randOccURL)
 
 app.debug = True
