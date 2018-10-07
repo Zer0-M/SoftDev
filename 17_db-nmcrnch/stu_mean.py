@@ -1,4 +1,10 @@
-
+'''
+Team Mohammed
+Mohammed Jamil, Mohammed Uddin
+SoftDev1 pd 6
+K17 -- Average
+2018-10-09
+'''
 import sqlite3
 
 
