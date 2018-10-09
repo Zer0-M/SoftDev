@@ -24,8 +24,9 @@ def table_creator(name,filename,field0,field1,field2):
         reader = csv.DictReader(csvfile)#The DictReader method turns each row into dictionray with fieldnames as keys 
         for row in reader:
             #The following command will insert the csv data into the table
-            insert = "INSERT INTO {0} VALUES('{1}',{2},{3});".format(name,row[field0],row[field1],row[field2])
-            c.execute(insert)
+            insert = "INSERT INTO {0} VALUES(?,?,?);".format(name)
+            params=(row[field0],row[field1],row[field2])
+            c.execute(insert, params )
 table_creator('peeps','peeps.csv','name','age','id')#this creates the table from the peeps csv
 table_creator('courses','courses.csv','code','mark','id')#this creates the table from the courses csv
 #==========================================================
