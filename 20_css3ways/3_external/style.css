@@ -1,0 +1,76 @@
+/*
+TeamCSSProfile - Ricky Lin, Mohammed Jamil
+SoftDev1 pd06
+K#20: Comic Sans Syndrome
+M 2018-11-05
+*/
+
+body {
+    background-color: rgb(80, 80, 80);  
+    font-weight: 500; 
+    font-family: Arial;
+}
+
+.width {
+    width: 100%;
+}
+
+.box {
+    margin-right: 20px;
+}
+
+.heading {
+    color: white; 
+    background-color: lightgray; 
+    text-align: center; 
+    height: 40px;
+}
+
+.body {
+    background-color: rgb(112, 112, 112); 
+    overflow: hidden;
+}
+
+.navbar {
+    width: 14%; 
+}
+
+.right {
+    padding-right: 1%; 
+}
+
+.float {
+    float: left;
+}
+
+h3 {
+    margin-left: 10px;
+}
+
+li {
+    list-style-type: none; 
+    font-size: 17px; 
+    margin-left: -30px;
+}
+
+a {
+    text-decoration: none; 
+    color: lightgray;
+}
+
+.text {
+    width: 84%; 
+    padding-left: 1%;
+}
+
+h2, p {
+    padding-right: 10px;
+}
+
+.end {
+    text-align: right; 
+    color: dimgray; 
+    background-color: rgb(70, 70, 70); 
+    height: 30px; 
+    padding-top: 10px;
+}
