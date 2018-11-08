@@ -1,4 +1,10 @@
-.cell small{
+/*
+  TeamFunNation - Ricky Lin, Mohammed Jamil
+  SoftDev1 pd06
+  K#21: Who Does Frame Work For?
+  M 2018-11-08
+*/
+.cell:not(#input){
   border:1px solid black;
 }
 
