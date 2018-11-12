@@ -1,0 +1,158 @@
+<!--
+  TeamFunNation - Ricky Lin, Mohammed Jamil
+  SoftDev1 pd06
+  K#22: Make Your Dog Food Taste Better
+  M 2018-11-09
+-->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!--The CSS CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/css/foundation.min.css" integrity="sha256-VEEaOnBKVRoYPn4AID/tY/XKVxKEqXstoo/xZ6nemak= sha384-D46t32f421/hB30qwnim2pIcisNN5GU9+6m2Mfnd3dKpTSFidZLa08/1StEiCFId sha512-WkgzH8VKemDfwrp18r+wgbx+oHXOkfd2kJs7ocAXdGDgonXDXh88E90IRtRZRXtO0IHprxYHYlY14h+wyTsUDA==" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!--The class names will create an element with the appropiate css as seen with the top bar-->
+    <div class="top-bar">
+      <div class="top-bar-left">
+	    <ul class="menu">
+        <li class="menu-text">Fake Site</li>
+      </ul>
+      </div>
+    </div>
+
+    <!--Foundation uses a 12 cell grid to display its content and this shows how this grid is layed out-->
+    <p>This is the 12 cell grid that foundation uses for adding elements. These are dynamic and adjusts to the screen size.</p>
+    <div class="grid-x">
+      <div class="cell small-1">1 cell</div>
+      <div class="cell small-1">1 cell</div>
+      <div class="cell small-1">1 cell</div>
+      <div class="cell small-1">1 cell</div>
+      <div class="cell small-1">1 cell</div>
+      <div class="cell small-1">1 cell</div>
+      <div class="cell small-1">1 cell</div>
+      <div class="cell small-1">1 cell</div>
+      <div class="cell small-1">1 cell</div>
+      <div class="cell small-1">1 cell</div>
+      <div class="cell small-1">1 cell</div>
+      <div class="cell small-1">1 cell</div>
+    </div>
+    <br>
+    <!--Foundation has a container type cards which can be used for various purposes--> 
+    <p>This is a card a type of container that can be created using foundation</p>
+    <div class="card">
+      <div class="card-divider">
+        Some instructions on Foundation usage
+      </div>
+      <div class="card-section">
+        <p> In order to use Foundation, you need to include the CDN which can be found in the head section of our source code<br>
+            To view our source code please right-click and there will be an option to view the source code(View Page Source in Firefox) 
+        </p>
+      </div>
+    </div>
+
+<!-- An example of a container created using foundation-->
+
+
+<p>
+  Here is an dynamic table created using foundation that adjusts according to the screen size
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Hero Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="First Name">Bruce</td>
+      <td data-label="Last Name">Wayne</td>
+      <td data-label="Hero Title">Batman</td>
+    </tr>
+    <tr>
+      <td data-label="First Name">Peter</td>
+      <td data-label="Last Name">Parker</td>
+      <td data-label="Hero Title">Spiderman</td>
+    </tr>
+    <tr>
+      <td data-label="First Name">Bruce</td>
+      <td data-label="Last Name">Banner</td>
+      <td data-label="Hero Title">The Hulk</td>
+    </tr>
+    <tr>
+      <td data-label="First Name">Clark</td>
+      <td data-label="Last Name">Kent</td>
+      <td data-label="Hero Title">Superman</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  Here we can create progress bars and give them percentage and width values 
+</p>
+<!--When using progress bars the aria-valuenow gives the amount filled, valuemin and valuemax provide upper and lower bounds, and valuetext is the text inside the bar -->
+<div class="progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
+  <span class="progress-meter" style="width: 25%">
+    <p class="progress-meter-text">25%</p>
+  </span>
+</div>
+
+<div class="progress" role="progressbar" tabindex="0" aria-valuenow="50" aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+  <span class="progress-meter" style="width: 50%">
+    <p class="progress-meter-text">50%</p>
+  </span>
+</div>
+  
+  <div class="progress" role="progressbar" tabindex="0" aria-valuenow="75" aria-valuemin="0" aria-valuetext="75 percent" aria-valuemax="100">
+  <span class="progress-meter" style="width: 75%">
+    <p class="progress-meter-text">75%</p>
+  </span>
+</div>
+  
+  <div class="progress" role="progressbar" tabindex="0" aria-valuenow="100" aria-valuemin="0" aria-valuetext="100 percent" aria-valuemax="100">
+  <span class="progress-meter" style="width: 100%">
+    <p class="progress-meter-text">100%</p>
+  </span>
+  </div>
+
+<p>
+  Here, we have a variety of widgets that you can use. A switch is essentially a checkbox with a paddle and words in it. Foundation also lets you create prettier versions of forms options as seen below.
+</p>
+
+  <!-- A swtich is a more advance version of the checkbox with a paddle and text beside the paddle-->
+  <p> Do you like dogs? </p>
+  <div class="switch large">
+    <input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
+    <label class="switch-paddle" for="exampleSwitch">
+      <span class="switch-active">Yes</span>
+      <span class="switch-inactive">No</span>
+    </label>
+  </div>
+  <!-- These are examples of forms in foundation they are similar to regular one but the css to make them look nice is done for you-->
+  <form>
+    <label>favorite breed
+      <select>
+        <option value="husky">Husky</option>
+        <option value="beagle">Beagle</option>
+        <option value="pug">Pug</option>
+        <option value="All">All</option>
+      </select>
+    </label>
+      <div class="grid-x">
+        <div class="medium-6 cell" id="input">
+          <label>Other
+            <input type="text" placeholder="Cyborg">
+          </label>
+        </div>
+      </div>
+  </form>
+  
+
+  <p>Foundation is coolz</p>
+  </body>
+</html>
+

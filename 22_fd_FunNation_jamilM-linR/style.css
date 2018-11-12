@@ -1,0 +1,19 @@
+/*
+  TeamFunNation - Ricky Lin, Mohammed Jamil
+  SoftDev1 pd06
+  K#22: Make Your Dog Food Taste Better
+  M 2018-11-09
+*/
+.cell:not(#input){
+  border:0.5px solid black;
+  background-color:skyblue;
+}
+
+p {
+  margin: 25px;
+}
+.card{
+  width:800px;
+  background-color: rgb(245, 245, 245)
+}
+
