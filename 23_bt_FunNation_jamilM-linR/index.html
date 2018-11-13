@@ -1,7 +1,7 @@
 <!-- 
     Team FunNation - Ricky Lin, Mohammed Jamil
     SoftDev1 pd6
-    K22 - How the Other Half Lives
+    K23 - How the Other Half Lives
     2018-11-12 
 -->
 
@@ -13,57 +13,48 @@
     <title>Boostrap</title>
 </head>
 <body>
+    <nav class="navbar fixed-top navbar-dark bg-dark">
+        <a href="#intro" id="links">Introduction</a>
+        <a href="#containers" id="links">Containers</a>
+        <a href="#buttons" id="links">Buttons</a>
+        <a href="#media" id="links">Media</a>
+        <a href="#alert" id="links">Alerts</a>
+        <a href="#table" id="links">Tables</a>
+    </nav>
+    <br>
+    <br>        
+    <br id="intro"><br>
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                <h1>Bootstrap</h1>
-                <h3>An introductory page to Bootstrap!</h3>
+                <h1>Boostrap</h1>
                 <h4>Recreation of Team Michael Jacksons page by Team FunNation </h4>
-                This is part of a container (note the padding on the sides).
-                <br>
-                If you try to resize your window, the text will be adjusted according to new dimensions 
-                <br>
-                <br>
             </div>
         </div>
     </div>
+    <br>
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                <h4>Introduction</h4>
-                If you already have Bootstrap in your style sheet,<a href="/#cols">skip this section</a>.
-                <br>
-                To add Bootstrap CSS to your site, add the following line of code into the head section of your html file.
-                <br>
-                This makes use of a Content Delivery Network (CDN).
-                <br> <br>
+                To add Bootstrap CSS to your site via CDN, add this line of code into the head section of your html file.
                 <pre>
                     
                     
                     &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
                     
                 </pre>
+
                 <br>
-                You can also download and use a local version of the CSS sheet. This is not recommended, but if you want to learn more <a href="http://getbootstrap.com/docs/4.1/getting-started/download/">here</a>
             </div>
         </div>
     </div>
+    <br id="containers"><br>
     <div class="container">
         <div class="row">
             <div class="col-sm">
                 <h4>Container</h4>
-                With bootstrap, you are able to create containers that will dynamically resize and can be divided into 1-12 sections. This is written as follows:
+                This is a container that can dynamically resize and be divided into 1-12 sections.
                 <br>
-                <pre>
-                    
-            &lt;div class="container">
-                &lt;div class="row">
-                    &lt;div class="col-sm">
-                        The number of times this piece is repeated is the number of columns
-                    &lt;/div>
-                &lt;/div>
-            &lt;/div>
-                </pre>
                 <br>
             </div>
         </div>
@@ -143,7 +134,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                The number of columns is limited to 12. As you can see below, if there are more columns than that they will wrap to the next line.
+                If you try to make more than 12, they will go to the next line
             </div>
         </div>
     </div>
@@ -191,19 +182,14 @@
             </div>
         </div>
     </div>
-    <br>
+    <br id="buttons"><br>
     <div class="container">
         <div class="row">
             <div class="col-sm">
                 <h4>Buttons</h4>
-                With bootstrap, you are able to create buttons of many styles without the hastle of making them look nice. This is written as follows:
+                You can create buttons of many styles without the hastle of making them look nice.
                 <br>
-                <pre>
-                    
-                    &lt;button type="button" class="btn btn-XXXX">Title</button>
-                </pre>
-                <br>
-                The different styles are displayed below with their names (what would replace XXXX in the code above).
+                The different styles are displayed below with their names.
                 <br><br>
                 <button type="button" class="btn btn-primary">primary</button>
                 <button type="button" class="btn btn-secondary">secondary</button>
@@ -221,36 +207,19 @@
         <div class="row">
             <div class="col-sm">
                 <h5>Other Button Styles</h5>
-                Note: These can all be used with all above styles, primary is being used as an example.
+                These can be used with the above
                 <br><br>
                 Outline buttons
-                <br><br>
-                <pre>
-                    
-                    &lt;button type="button" class="btn btn-outline-primary">Primary</button>
-                </pre>
                 <br><br>
                 <button type="button" class="btn btn-outline-primary">Primary</button>
                 <br><br>
                 Disabled buttons
                 <br><br>
-                <pre>
-                    
-                    &lt;button type="button" class="btn btn-primary" disabled>Primary</button>
-                </pre>
-                <br><br>
                 <button type="button" class="btn btn-primary" disabled>Primary</button>
-                <br>
-                Try pressing the button above!<br>
-                Note: This does not prevent the button from being clicked at all costs; someone can always edit the html from their browser!
+                <br><br>
+                Someone can still click on a disabled button with html editing
                 <br><br>
                 Buttons as a class
-                <br><br>
-                <pre>
-                    
-                    &lt;a class="btn btn-primary" href="#" role="button">Link</a>
-                    &lt;input class="btn btn-primary" type="submit" value="Submit">
-                </pre>
                 <br><br>
                 <a class="btn btn-primary" href="#" role="button">Link</a>
                 <input class="btn btn-primary" type="submit" value="Submit">
@@ -258,111 +227,51 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <h4>Media</h4>
-                Bootstrap takes care of problems with displaying media objects alongside text.
-                <br>
-                <div class="media">
-                    <img class="mr-3" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" alt="git octopus">
-                    <div class="media-body">
-                        <h5 class="mt-0">Media heading</h5>
-                        Text is formatted next to the image automatically.
-                    </div>
-                </div>
-                <br>
-                Basic code for media formatting
-                <pre>
-
-                &lt;div class="media">
-                    &lt;img class="mr-3" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" alt="git octopus">
-                    &lt;div class="media-body">
-                        &lt;h5 class="mt-0">Media heading</h5>
-                        Text is formatted next to the image automatically.
-                    &lt;/div>
-                &lt;/div>
-                </pre>
-
+    <br id="media"><br>
+    <div class="media">
+            <img class="mr-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Emoji_u1f47b.svg/768px-Emoji_u1f47b.svg.png" alt="boo">
+            <div class="media-body">
+                <h5 class="mt-0">Formatted Text</h5>
+                BOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <h4>Alerts</h4>
-                Alerts can be triggered to inform users of info. They can be used with any of the styles that you can use with buttons.
-                <div class="alert alert-primary" role="alert">primary alert</div>
-                <div class="alert alert-secondary" role="alert">secondary alert</div>
-                <div class="alert alert-success" role="alert">success alert</div>
-                <br><br>
-                <pre>
-
-                        &lt;div class="alert alert-primary" role="alert">primary alert</div>
-
-                </pre>
-                <br><br>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <h4>Tables</h4>
-                    Bootstrap provides easy customization for tables, which are designed to be opt-in.
-                    <br><br>
-                    <table class="table">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">col0</th>
-                                <th scope="col">col1</th>
-                                <th scope="col">col2</th>
-                                <th scope="col">col3</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>1.1</td>
-                                <td>1.2</td>
-                                <td>1.3</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>2.1</td>
-                                <td>2.2</td>
-                                <td>2.3</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>3.1</td>
-                                <td>3.2</td>
-                                <td>3.3</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <br><br>
-                    <pre>
-    
-                &lt;table class="table">
-                    &lt;thead class="thead-dark">
-                        &lt;tr>
-                            &lt;th scope="col">col1</th>
-                            &lt;th scope="col">col2</th>
-                        &lt;/tr>
-                    &lt;/thead>
-                    &lt;tbody>
-                        &lt;tr>
-                            &lt;th scope="row">1</th>
-                            &lt;td>1.1</td>
-                        &lt;/tr>
-                    &lt;/tbody>
-                &lt;/table>
-    
-                    </pre>
-                    <br><br>
-                </div>
-            </div>
-    </div>
+        <br id="alert"><br>
+        <h4> Here are some alerts </h4>
+        <br>
+        <div class="alert alert-primary" role="alert">primary alert</div>
+        <div class="alert alert-secondary" role="alert">secondary alert</div>
+        <div class="alert alert-success" role="alert">success alert</div>
+        <br id="table"><br>
+        <h4>Tables</h4>
+        <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Spooky</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Is</th>
+                        <th scope="col">Over</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">It's</th>
+                        <td>Time</td>
+                        <td>For</td>
+                        <td>Gobble</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Gobble</th>
+                        <td>Time</td>
+                        <td>Where</td>
+                        <td>We</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Eat</th>
+                        <td>Big</td>
+                        <td>Flightless</td>
+                        <td>Birds</td>
+                    </tr>
+                </tbody>
+            </table>
 </body>
 </html>
