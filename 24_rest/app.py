@@ -1,3 +1,9 @@
+'''
+  Mohammed Jamil
+  SoftDev1 pd06
+  K#24: A RESTful Journey Skyward
+  M 2018-11-14
+'''
 from flask import Flask,render_template
 import urllib.request as request
 import urllib.parse as parse
@@ -10,8 +16,8 @@ def root():
         dict=json.load(nasa)
     imgurl=dict["hdurl"]
     explain=dict["explanation"]
-    print(imgurl)
-    print(explain)
+    #print(imgurl)
+    #print(explain)
     return render_template("template.html",img=imgurl,explanation=explain)
 
 app.debug = True
