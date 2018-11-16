@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>REST now</title>
+  </head>
+  <body>
+    <h1>More RESTful APIs!</h1>
+    <h2>Houndify</h2>
+    <h3>Example results</h3>
+    The weather: {{weather}}
+    <br><br>
+    A bad joke: {{joke}}
+    <h2>ipapi</h2>
+    <h3>Location of this ip: {{ip}}</h3>
+    {{loc}}
+    <h3>Holidays</h3>
+    <h3>Holidays from last month</h3>
+    {% for holiday in holidays%}
+      {% for key, value in holiday.items() %}
+        {{key}}: {{value}}
+        <br>
+      {% endfor %}
+      <br><br>
+    {%endfor%}
+  </body>
+<html>
