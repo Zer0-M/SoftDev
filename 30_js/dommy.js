@@ -51,12 +51,31 @@ for(var i=0; i < lis.length; i++) {
 };
 
 var fib = function(n) {
-    if(n < 2){
+    if(n == 0){
+        return 0;
+    }
+    if(n == 1){
         return 1;
     } else {
         return fib(n-1) + fib(n-2);
     }
 };
+var fib2 = (n) => {
+    
+    var window = [0, 1];
+    if(n < 2){
+        return window[n];
+    }else{
+        var count =0;
+        while(count<n){
+            sum = window[0] + window[1];
+            window[0] = window[1];
+            window[1]=sum;
+            count++;
+        }
+        return window[0];
+    }
+}
 
 /*
     The addFib function adds a list element with the corresponding fibonacci number to the fiblist
@@ -73,7 +92,14 @@ var addFib = function(e){
 
 var addFib2 = function(e){
     console.log(e);
+    var list=document.createElement("li");
+    var num=document.createTextNode(fib2(count));
+    list.appendChild(num);
+    count++;
+    document.getElementById("fiblist").appendChild(list);
 };
 // attaches the addFib function to the button fb
 var fb = document.getElementById("fb");
 fb.addEventListener("click", addFib);
+var fb = document.getElementById("fb2");
+fb.addEventListener("click", addFib2);
